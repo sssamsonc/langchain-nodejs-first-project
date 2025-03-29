@@ -42,7 +42,7 @@ const model = new OpenAI({
     ],
 });
 
-async function generateCharacter() {
+const run = async () => {
     try {
         const prompt = await promptTemplate.format({
             format_instructions: formatInstructions,
@@ -61,4 +61,4 @@ async function generateCharacter() {
     }
 }
 
-generateCharacter();
+await run();
